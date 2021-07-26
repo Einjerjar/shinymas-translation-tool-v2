@@ -41,12 +41,26 @@ const Sidebar = (props: { hidden: boolean }) => {
     const fName = e.target.files[0].name
 
     parse(e.target.files[0], {
-      header: true,
+      // header: true,
       skipEmptyLines: true,
       complete: (res) => {
         // Only update file name if load succeeded
         setFileName(fName)
-        setDataSet(res.data as TranslationMapT[])
+        const data = res.data as Array<Array<string>>
+
+        if (data[0][0] == 'id') {
+          data.splice(0, 1)
+        }
+        const cData: TranslationMapT[] = []
+
+        data.forEach(v => {
+          const [ id, name, text, trans ] = v
+          cData.push({
+            id, name, text, trans
+          })
+        })
+
+        setDataSet(cData)
       }
     })
   }
@@ -60,7 +74,7 @@ const Sidebar = (props: { hidden: boolean }) => {
     // Append `-edit` to the filename and change file extension
     //  (file extension is ignored tho, since mimetype takes over)
     const fName = fileName.split('.')
-    const nfName = fName.slice(0, fName.length-1).join('.') + '-edit.csv'
+    const nfName = fName.slice(0, fName.length - 1).join('.') + '-edit.csv'
 
     const a = document.createElement('a')
     a.download = nfName
@@ -121,9 +135,9 @@ const Sidebar = (props: { hidden: boolean }) => {
                 <Tooltip
                   content={v.trans}
                   // Tooltip on top for last item to avoid clipping
-                  position={i == dataSet.length -1 ? 'top' : 'down'}
+                  position={i == dataSet.length - 1 ? 'top' : 'down'}
                 >
-                  <SideCard item={v}/>
+                  <SideCard item={v} />
                 </Tooltip>
               </div>
             )
