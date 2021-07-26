@@ -1,0 +1,127 @@
+#root {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+
+.btn {
+  @apply cursor-pointer px-3 py-2 border-1 border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 dark:active:bg-gray-600 rounded-md select-none;
+}
+
+.auto-bg-card {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+.card {
+  @apply rounded-md m-2 shadow-md;
+}
+
+.card-header {
+  @apply p-3 flex justify-between items-center select-none;
+}
+
+.card-body {
+  @apply p-3;
+}
+
+.separator {
+  height: 1px;
+  width: 100%;
+
+  @apply bg-gray-300 dark:bg-gray-700;
+}
+
+.separator-d {
+  height: 1px;
+  width: 100%;
+}
+
+.game-text {
+  color: #555;
+
+  /* color: #aaa; */
+}
+
+.game-view-base {
+  @apply absolute top-0 left-0 text-black w-full;
+}
+
+.l-test-root {
+  @apply opacity-0 pointer-events-none select-none w-1000px;
+}
+
+.inp {
+  @apply px-3 py-2 rounded-md border-1 border-gray-400 dark:border-gray-600 bg-transparent outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 focus:bg-gray-200 dark:focus:bg-gray-900;
+}
+
+.inp[disabled] {
+  @apply opacity-75 dark:bg-gray-700;
+}
+
+.tooltip-base {
+  @apply relative;
+}
+
+.tooltip-root {
+  width: fit-content;
+
+  @apply z-5 pointer-events-none select-none hidden group-hover:block shadow-md absolute;
+}
+
+.tooltip-container {
+  @apply px-3 py-2 border-1 bg-gray-200 dark:bg-gray-800 rounded-md border-gray-300 dark:border-gray-600 border-b-3 border-gray-400 dark:border-b-gray-500 shadow-md;
+}
+
+.editor-field {
+  @apply flex flex-col col-span-full md:col-span-2 overflow-hidden;
+}
+
+.floating-sidebar {
+  @apply overflow-hidden md:hidden absolute left-0 top-0 w-screen h-screen z-10 p-3;
+}
+
+.floating-sidebar-w {
+  @apply h-full w-full overflow-hidden flex;
+}
+
+.sidebar {
+  @apply flex-col overflow-hidden z-10 md:z-0 md:relative w-full md:w-auto;
+}
+
+.side-card {
+  @apply cursor-pointer bg-gray-300 dark:bg-gray-700 border-r-6 border-r-transparent;
+}
+
+.side-card-warn {
+  @apply border-r-yellow-400 dark:border-r-yellow-600;
+}
+
+.side-card-id {
+  @apply text-sm text-gray-500 dark:text-gray-500;
+}
+
+.side-card-name {
+  @apply text-sm text-gray-700 dark:text-gray-400;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-button {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-700 opacity-50 rounded-md;
+}
