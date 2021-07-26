@@ -197,7 +197,7 @@ const EditorField = () => {
         </div>
         <div className="flex children:mx-1">
           <Tooltip content="Source">
-            <a href="https://github.com/einjerjar" className="btn block">
+            <a href="https://github.com/Einjerjar/shinymas-translation-tool-v2" className="btn block">
               <Icon icon="carbon:logo-github"/>
             </a>
           </Tooltip>
