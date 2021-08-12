@@ -22,13 +22,14 @@ export default defineConfig({
         darkMode: 'class',
       }
     }),
-    // !!Analytics!!
+    // !!ANALYTICS!!
     ViteRadar({
       // enableDev: true,
       analytics: {
         id: process.env.GTAG
       }
     }),
+    // !!ANALYTICS!!
   ],
   base: './'
 })
