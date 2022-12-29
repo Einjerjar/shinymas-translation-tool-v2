@@ -13,7 +13,7 @@
 - Custom BG for choice menus
 
 ## Working Copy
-- [Working copy over at my site](http://ein.rf.gd/smth2)
+- ~~[Working copy over at my site](http://ein.rf.gd/smth2)~~ [Working copy w/o analytics](https://ein-smth.vercel.app/)
 - **NOTE:** working copy has google analytics running in the background, so if you don't want that, it might be better to try and build the app yourself, as a bonus, you will be able to use it locally
 - **NOTE:** working copy might not be up to date with the repo
 
